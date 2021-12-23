@@ -14,9 +14,9 @@ function writePassword() {
 
   // Sets the length of the password
   var length = window.prompt("Select a password length between 8 and 128 characters");
-
-  if (length == number && length < 128 && length > 8) {
+  while (length > 128 || length < 8 || isNaN(length)) {
     alert("Please select a valid length");
+    length = window.prompt("Select a password length between 8 and 128 characters");
   }
 
   // sets the variable that will contain all the allowed characters
